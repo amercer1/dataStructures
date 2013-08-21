@@ -1,5 +1,5 @@
 require_relative '../linked_list'
- 
+
 require 'yaml'
 
 RSpec.configure do |config|
