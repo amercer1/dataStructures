@@ -99,4 +99,17 @@ describe LinkedList do
       @linked_list.insert_at_index(-1,10).should == nil
     end
   end
+
+  describe "#print_list" do
+    it "should print the list" do
+      @linked_list.insert(10)
+      @linked_list.insert(11)
+      @linked_list.insert(12)
+      @linked_list.print_list.should == ["10","11","12"]
+    end 
+
+    it "should return an empty array when list is empty" do
+      @linked_list.print_list.should == []
+    end
+  end
 end

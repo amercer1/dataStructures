@@ -1,6 +1,5 @@
 class LinkedList
-  attr_accessor :count
-
+ 
   class Node
     attr_accessor :value, :next_node
 
@@ -98,4 +97,19 @@ class LinkedList
       @position = @position + 1
     end
   end
+
+  def print_list
+    print_array = []
+    if @head_of_list == nil
+      print_array
+    else
+      temp = @head_of_list
+      until temp == nil
+        print_array << temp.value.inspect
+        temp = temp.next_node
+      end
+      print_array
+    end
+  end
 end
+
