@@ -75,11 +75,15 @@ class LinkedList
   end
 
   def insert_at_index(index, value)
-    if index < 0 or index > @position
+    if index < 0 or index > @position + 1
       nil
     elsif @head_of_list == nil
       @head_of_list = Node.new(value)
       @position = 0
+    elsif index == 0
+      temp_2 = Node.new(value)
+      temp_2.next_node = @head_of_list
+      @head_of_list = temp_2
     else
       temp_1 = @head_of_list
       temp_2 = temp_1
